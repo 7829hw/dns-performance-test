@@ -14,6 +14,14 @@ This Python script measures the performance of various DNS servers, including pl
 *   Handles `dnsperf` output parsing for different versions (specifically tested with `dnsperf 2.14.0` which outputs latency in seconds).
 *   Provides progress updates in the terminal during execution.
 
+## Example Output
+
+Upon script completion, a performance comparison chart image like the following will be generated:
+
+![DNS Performance Chart Example](dns_performance_chart.png)
+
+*(The actual generated image will vary based on the contents of `dns_servers.txt`, `domains.txt`, and your network environment.)*
+
 ## Prerequisites
 
 Before running the script, ensure you have the following installed:
@@ -95,17 +103,18 @@ The script requires two text files in the same directory as the script:
 
 1.  Save the Python script (e.g., `dns_speed_test.py`) in a directory.
 2.  Create `dns_servers.txt` and `domains.txt` in the same directory and populate them with your desired servers and domains.
-3.  Open your terminal or command prompt, navigate to the directory where you saved the files.
-4.  Run the script using Python 3:
+3.  (Optional) Add an example `dns_performance_chart.png` to your repository for display in the README.
+4.  Open your terminal or command prompt, navigate to the directory where you saved the files.
+5.  Run the script using Python 3:
     ```bash
     python ./dns_speed_test.py 
     ```
     (If your script has a different name, use that name instead.)
 
-5.  The script will print progress updates to the terminal.
-6.  Upon completion, a chart image named `dns_performance_chart.png` will be saved in the same directory.
+6.  The script will print progress updates to the terminal.
+7.  Upon completion, a chart image named `dns_performance_chart.png` will be saved in the same directory (overwriting the example if it exists).
 
-## Output
+## Output (When Script is Run)
 
 *   **Terminal Output**: Shows the server being tested, the domain being queried, and the measured latencies for uncached and cached responses. It also prints average latencies for each server.
 *   **`dns_performance_chart.png`**: A bar chart image visualizing the average uncached and cached response times (in milliseconds) for each DNS server, sorted by uncached performance (lower is better).
