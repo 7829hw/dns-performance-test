@@ -1,0 +1,13 @@
+# '#'으로 시작하는 줄은 주석으로 처리되어 무시됩니다.
+# 이름,타입,서버주소또는URL[,포트]
+
+Cloudflare-UDP,plain,1.1.1.1
+Google-UDP,plain,8.8.8.8
+Quad9-UDP,plain,9.9.9.9
+Cloudflare-DoT,dot,1.1.1.1
+Google-DoT,dot,dns.google
+Quad9-DoT,dot,dns.quad9.net
+# AdGuard-DoT,dot,dns.adguard.com,853 # DoT 포트 명시 예시
+Cloudflare-DoH,doh,https://cloudflare-dns.com/dns-query
+Google-DoH,doh,https://dns.google/dns-query
+Quad9-DoH,doh,https://dns.quad9.net/dns-query
